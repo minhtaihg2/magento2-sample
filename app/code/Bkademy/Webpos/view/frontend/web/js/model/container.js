@@ -20,7 +20,6 @@ define(
              * Show menu
              */
             showMenu: function(){
-                console.log(222);
                 var self = this;
                 var menu = $(AppConfig.ELEMENT_SELECTOR.MENU);
                 var menuMask = $(AppConfig.ELEMENT_SELECTOR.MENU_MASK);

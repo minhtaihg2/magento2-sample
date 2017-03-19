@@ -21,7 +21,6 @@ define([
         },
 
         ajaxLogin: function () {
-            console.log(111);
 
             var serviceUrl,
                 payload;
