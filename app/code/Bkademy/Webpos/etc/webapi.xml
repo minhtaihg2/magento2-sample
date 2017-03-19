@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <!-- Staff api -->
+    <route url="/V1/webpos/staff/login" method="POST">
+        <service class="Bkademy\Webpos\Api\Staff\StaffManagementInterface" method="login"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/webpos/staff/list" method="GET">
+        <service class="Bkademy\Webpos\Api\Staff\StaffRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="Bkademy_Webpos::webpos"/>
+        </resources>
+    </route>
+    <route url="/V1/webpos/staff/testabc/:staffId" method="GET">
+        <service class="Bkademy\Webpos\Api\Staff\StaffRepositoryInterface" method="getId" />
+        <resources>
+            <resource ref="Bkademy_Webpos::webpos" />
+        </resources>
+    </route>
+    <route url="/V1/webpos/staff/test/:id" method="GET">
+        <service class="Bkademy\Webpos\Api\Staff\StaffRepositoryInterface" method="test" />
+        <resources>
+            <resource ref="Bkademy_Webpos::webpos" />
+        </resources>
+    </route>
+    <route url="/V1/webpos/staff/logout" method="POST">
+        <service class="Bkademy\Webpos\Api\Staff\StaffRepositoryInterface" method="logout"/>
+        <resources>
+            <resource ref="Bkademy_Webpos::webpos" />
+        </resources>
+    </route>
+    <route url="/V1/webpos/staff/logout" method="POST">
+        <service class="Bkademy\Webpos\Api\StaffTest\StaffRepositoryInterface" method="logout"/>
+        <resources>
+            <resource ref="Bkademy_Webpos::webpos" />
+        </resources>
+    </route>
+    <!-- End Staff api -->
+
+
+
+
+
+</routes>
