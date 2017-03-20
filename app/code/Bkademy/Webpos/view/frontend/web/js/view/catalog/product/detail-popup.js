@@ -23,10 +23,12 @@ define(
             initialize: function () {
                 this._super();
             },
-
             closeDetailPopup: function() {
-
-            }
+                $("#popup-product-detail").hide();
+                $(".wrap-backover").hide();
+                $('.notification-bell').show();
+                $('#c-button--push-left').show();
+            },
         });
     }
 );

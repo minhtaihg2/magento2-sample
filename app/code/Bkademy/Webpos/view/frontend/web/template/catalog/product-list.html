@@ -16,7 +16,8 @@
                 <button type="submit" class="btn btn-default">Search
                 </button>
             </div>
-            <div class="catalog-header" data-toggle="collapse" data-target="#all-categories" data-bind="click: getAllCategories">
+            <!--<div class="catalog-header" data-toggle="collapse" data-target="#all-categories" data-bind="click: getAllCategories">-->
+            <div class="catalog-header" data-toggle="collapse" data-target="#all-categories">
                 <span class="icon-iconPOS-categories"></span>
                 <span class="title title-header-page" data-bind="i18n: 'All Categories'"></span>
                 <span class="icon-iconPOS-dropdown"></span>
@@ -33,7 +34,8 @@
                     <div class="col-md-12">
                         <div class="row">
                             <!-- ko foreach: product -->
-                            <div class="col-sm-3" data-bind="click: $parent.addToCart.bind($data)">
+                            <!--<div class="col-sm-3" data-bind="click: $parent.addToCart.bind($data)">-->
+                            <div class="col-sm-3">
 
                                 <div class="item product-item">
                                     <div class="product-img">
@@ -49,7 +51,8 @@
                                             <span class="final-price price"  data-bind="text: $parent.formatPrice(price)"></span>
                                         </div>
                                         <span>Available qty: </span>
-                                        <label data-bind="text: stock"></label>
+                                        <label data-bind="text: 'Stock'"></label>
+                                        <!--<label data-bind="text: stock"></label>-->
                                     </div>
                                     <a data-target="#popup-product-details" data-toggle="modal" class="info" href="#" data-bind="click: $parent.showPopupDetails.bind($parent), attr: {'title': $t('View product details')}">
                                         <span class="icon-iconPOS-detail"><span class="path1"></span><span class="path2"></span></span>
